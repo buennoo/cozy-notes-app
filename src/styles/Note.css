@@ -1,0 +1,29 @@
+.note {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+    min-height: 300px;
+    min-width: 200px;
+
+    padding: 20px;
+    background-color: beige;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.date {
+    font-family: sans-serif;
+    color: blue;
+}
+
+.note-content {
+    margin-top: 15px;
+    font-family: 100px;
+}
