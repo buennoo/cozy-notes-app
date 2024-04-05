@@ -37,10 +37,12 @@ const App = () => {
     const newNotes = notes.filter((note) => note.id !== id);
     setNotes(newNotes);
   }
+  
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className="page-wrap">
-      <Header />
+    <div className={"pagewrap" && darkMode === false ? "page-wrap" : document.body.classList.add("dark-mode")}>
+      <Header turnDarkMode={setDarkMode}/>
       <NotesList notes={notes} handleAddNote={addNewNote} handleDeleteNote={deleteNote}/>
     </div>
   );

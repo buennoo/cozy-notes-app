@@ -10,6 +10,7 @@
     max-height: 300px;
 
     background-color: aliceblue;
+    border: 2px dashed #422800;
 }
 
 .note-add-footer {
