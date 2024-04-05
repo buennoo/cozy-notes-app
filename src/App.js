@@ -33,10 +33,15 @@ const App = () => {
     setNotes(newNotes);
   }
 
+  const deleteNote = (id) => {
+    const newNotes = notes.filter((note) => note.id !== id);
+    setNotes(newNotes);
+  }
+
   return (
     <div className="page-wrap">
       <Header />
-      <NotesList notes={notes} handleAddNote={addNewNote} />
+      <NotesList notes={notes} handleAddNote={addNewNote} handleDeleteNote={deleteNote}/>
     </div>
   );
 }

@@ -10,6 +10,7 @@
     background-color: beige;
     border: 1px solid gray;
     border-radius: 10px;
+    white-space: pre-wrap;
 }
 
 .note-header {
@@ -21,6 +22,15 @@
 .date {
     font-family: sans-serif;
     color: blue;
+}
+
+.delete-icon {
+    cursor: pointer;
+    color: blue;
+}
+
+.delete-icon:hover {
+    color: rgb(1, 1, 165); 
 }
 
 .note-content {

@@ -22,3 +22,8 @@ code {
   margin-left: auto;
   margin-right: auto;
 }
+
+.dark-mode {
+  color: rgb(221, 216, 205);
+  background-color: rgb(29, 29, 29);
+}

@@ -3,7 +3,7 @@ import "../styles/AddNote.css"
 
 const AddNote = ({addNoteData}) => {
     const [noteText, setNoteText] = useState('');
-    const charLimit = 10;
+    const charLimit = 200;
 
     const handleInput = (event) => {
         if(charLimit > event.target.value.length){
