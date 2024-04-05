@@ -1,15 +1,21 @@
 import { useState } from 'react'
 import "../styles/AddNote.css"
 
-const AddNote = () => {
+const AddNote = ({addNoteData}) => {
     const [noteText, setNoteText] = useState('');
+    const charLimit = 10;
 
     const handleInput = (event) => {
-        setNoteText(event.target.value);
+        if(charLimit > event.target.value.length){
+            setNoteText(event.target.value);
+        }
     }
 
     const saveNote = () => {
-        console.log('save')
+        if(noteText.trim() !== ''){
+            addNoteData(noteText);
+        }
+        setNoteText('');
     }
 
     return (
@@ -21,9 +27,9 @@ const AddNote = () => {
             </textarea>
             <div class="note-add-footer">
                 <span>
-                    ..Remaining
+                    { charLimit - noteText.length }
                 </span>
-                <button className="note-save" onClick={saveNote()}>
+                <button className="note-save" onClick={ noteText.length <= 0 ? null : saveNote }>
                     Save
                 </button>
             </div>

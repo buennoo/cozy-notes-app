@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import NotesList from "./components/NotesList";
+import Header from './components/Header';
 
 const App = () => {
   const [notes, setNotes] = useState([
@@ -21,9 +22,21 @@ const App = () => {
     },
   ]);
 
+  const addNewNote = (input) => {
+    const date = new Date();
+    const newNote = {
+      id: nanoid(),
+      text: input,
+      date: date.toLocaleDateString()
+    }
+    const newNotes = [...notes, newNote];
+    setNotes(newNotes);
+  }
+
   return (
     <div className="page-wrap">
-      <NotesList notes={notes} />
+      <Header />
+      <NotesList notes={notes} handleAddNote={addNewNote} />
     </div>
   );
 }
