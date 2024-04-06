@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import "../styles/AddNote.css"
 
 const AddNote = ({addNoteData}) => {
@@ -6,7 +6,7 @@ const AddNote = ({addNoteData}) => {
     const charLimit = 200;
 
     const handleInput = (event) => {
-        if(charLimit > event.target.value.length){
+        if(charLimit >= event.target.value.length){
             setNoteText(event.target.value);
         }
     }
@@ -18,12 +18,19 @@ const AddNote = ({addNoteData}) => {
         setNoteText('');
     }
 
+    const enterNote = (event) => {
+        if(event.key === 'Enter' && !event.shiftKey){
+            saveNote();
+        }
+    }
+
     return (
         <div className="note-add">
             <textarea 
                 placeholder="Add a note.."
                 onInput={handleInput}
-                value={noteText}>
+                value={noteText}
+                onKeyDown={enterNote}>
             </textarea>
             <div class="note-add-footer">
                 <span>
