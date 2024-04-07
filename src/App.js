@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import NotesList from "./components/NotesList";
 import Header from './components/Header';
@@ -40,9 +40,21 @@ const App = () => {
   
   const [darkMode, setDarkMode] = useState(false);
 
+  //manipulating the DOM directly because of <body> tag
+  useEffect(() => {
+    if(darkMode) {
+      document.body.style.backgroundColor = "rgb(29, 29, 29)";
+      document.body.style.color = "rgb(221, 216, 205)";
+    }
+    else {
+      document.body.style.backgroundColor = "";
+      document.body.style.color = "";
+    }
+  }, [darkMode]);
+
   return (
-    <div className={"pagewrap" && darkMode === false ? "page-wrap" : document.body.classList.add("dark-mode")}>
-      <Header turnDarkMode={setDarkMode}/>
+    <div className={"page-wrap"}>
+      <Header turnDarkMode={setDarkMode} headerDarkMode={darkMode}/>
       <NotesList notes={notes} handleAddNote={addNewNote} handleDeleteNote={deleteNote}/>
     </div>
   );
