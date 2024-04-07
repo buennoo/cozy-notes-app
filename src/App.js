@@ -38,17 +38,17 @@ const App = () => {
     setNotes(newNotes);
   }
   
-  const [darkMode, setDarkMode] = useState(false);
+  const readDarkMode = localStorage.getItem('dark') === 'true';
+  const [darkMode, setDarkMode] = useState(readDarkMode);
 
-  //manipulating the DOM directly because of <body> tag
+  //manipulating the DOM directly because of the <body> tag
   useEffect(() => {
+    localStorage.setItem('dark', darkMode);
     if(darkMode) {
       document.body.style.backgroundColor = "rgb(29, 29, 29)";
-      document.body.style.color = "rgb(221, 216, 205)";
     }
     else {
       document.body.style.backgroundColor = "";
-      document.body.style.color = "";
     }
   }, [darkMode]);
 
