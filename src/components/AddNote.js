@@ -30,7 +30,8 @@ const AddNote = ({addNoteData}) => {
                 placeholder="Add a note.."
                 onInput={handleInput}
                 value={noteText}
-                onKeyDown={enterNote}>
+                onKeyDown={enterNote}
+                rows="3">
             </textarea>
             <div class="note-add-footer">
                 <span id='remaining'>

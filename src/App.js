@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import NotesList from "./components/NotesList";
 import Header from './components/Header';
+import AddNote from './components/AddNote';
 
 const App = () => {
   const [notes, setNotes] = useState([
@@ -45,7 +46,8 @@ const App = () => {
   return (
     <div className={"page-wrap"}>
       <Header turnDarkMode={setDarkMode} headerDarkMode={darkMode}/>
-      <NotesList notes={notes} handleAddNote={addNewNote} handleDeleteNote={deleteNote}/>
+      <AddNote addNoteData={addNewNote}/>
+      <NotesList notes={notes} handleDeleteNote={deleteNote}/>
     </div>
   );
 }
