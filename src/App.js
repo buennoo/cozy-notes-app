@@ -10,16 +10,6 @@ const App = () => {
       text: "First note!",
       date: "04/04/2024"
     },
-    {
-      id: nanoid(),
-      text: "Second note!",
-      date: "04/04/2024"
-    },
-    {
-      id: nanoid(),
-      text: "New note!",
-      date: "04/04/2024"
-    },
   ]);
 
   const addNewNote = (input) => {

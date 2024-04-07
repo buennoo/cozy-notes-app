@@ -33,7 +33,7 @@ const AddNote = ({addNoteData}) => {
                 onKeyDown={enterNote}>
             </textarea>
             <div class="note-add-footer">
-                <span>
+                <span id='remaining'>
                     { charLimit - noteText.length }
                 </span>
                 <button className="note-save" onClick={ noteText.length <= 0 ? null : saveNote }>

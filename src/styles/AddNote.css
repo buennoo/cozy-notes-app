@@ -1,32 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 .note-add {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 10px;
 
     margin: 0 auto;
     padding: 10px;
 
     max-width: fit-content;
-    max-height: 300px;
+    max-height: 200px;
 
-    background-color: aliceblue;
-    border: 2px dashed #422800;
+    background-color: white;
+
+    font-family: "Inter";
 }
 
 .note-add-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .note-save {
     background-color: #ededed;
-    border: 1px solid #422800;
-    border-radius: 15px;
-    box-shadow: #422800 4px 4px 0 0;
-    color: #422800;
+    border: 1px solid rgb(60, 60, 60);
+    border-radius: 12px;
+    box-shadow: rgb(60, 60, 60) 4px 4px 0 0;
+    color: rgb(60, 60, 60);
     cursor: pointer;
-    display: inline-block;
     font-weight: bold;
     font-size: 16px;
     padding: 10px;
@@ -35,7 +38,6 @@
     text-decoration: none;
     user-select: none;
     -webkit-user-select: none;
-    touch-action: manipulation;
 }
 
 .note-save:hover {
@@ -48,15 +50,18 @@
 }
 
 textarea {
+    padding: 5px;
     font-size: 14px;
-    font-family: Comic Sans MS;
-    background-color: aliceblue;
     resize: none;
-    border: none;
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 150px;
+    border: 2px dashed rgb(60, 60, 60);
 }
 
 textarea:focus {
     outline: none;
+}
+
+#remaining {
+
 }
