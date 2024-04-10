@@ -29,8 +29,6 @@ const Note = ({ id, text, date, toDelete }) => {
         setIsDragged(false);
     }
 
-
-
     return (
         <div className="note"
         style={{position: 'absolute', cursor: isDragged ? 'grabbing' : 'grab', left: position.x, top: position.y }}
