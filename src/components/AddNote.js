@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import "../styles/AddNote.css"
 
 const AddNote = ({addNoteData}) => {
@@ -14,12 +14,13 @@ const AddNote = ({addNoteData}) => {
     const saveNote = () => {
         if(noteText.trim() !== ''){
             addNoteData(noteText);
+            setNoteText('');
         }
-        setNoteText('');
     }
 
     const enterNote = (event) => {
         if(event.key === 'Enter' && !event.shiftKey){
+            event.preventDefault();
             saveNote();
         }
     }
