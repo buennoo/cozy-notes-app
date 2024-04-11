@@ -19,6 +19,8 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     overflow-y: auto;
+
+    position: relative;
 }
 
 .note-header {

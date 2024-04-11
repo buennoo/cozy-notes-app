@@ -24,3 +24,10 @@ code {
   margin-left: auto;
   margin-right: auto;
 }
+
+.header-wrap {
+  margin: 0 auto;
+  background-color: aliceblue;
+  width: fit-content;
+  height: fit-content;
+}

@@ -45,8 +45,10 @@ const App = () => {
 
   return (
     <div className={"page-wrap"}>
-      <Header turnDarkMode={setDarkMode} headerDarkMode={darkMode}/>
-      <AddNote addNoteData={addNewNote}/>
+      <div className={"header-wrap"}>
+        <Header turnDarkMode={setDarkMode} headerDarkMode={darkMode}/>
+        <AddNote addNoteData={addNewNote}/>
+      </div>
       <NotesList notes={notes} handleDeleteNote={deleteNote}/>
     </div>
   );

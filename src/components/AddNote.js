@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import "../styles/AddNote.css"
+import tapeImg from '../assets/tape.png';
 
 const AddNote = ({addNoteData}) => {
     const [noteText, setNoteText] = useState('');
@@ -27,6 +28,8 @@ const AddNote = ({addNoteData}) => {
 
     return (
         <div className="note-add">
+            <img src={tapeImg} alt='tape' class='tape' id='tape-up'/>
+            <img src={tapeImg} alt='tape' class='tape' id='tape-down'/>
             <textarea 
                 placeholder="Add a note.."
                 onInput={handleInput}
@@ -35,7 +38,7 @@ const AddNote = ({addNoteData}) => {
             </textarea>
             <div class="note-add-footer">
                 <span id='remaining'>
-                    { charLimit - noteText.length }
+                    { charLimit - noteText.length } characters left
                 </span>
                 <button className="note-save" onClick={ noteText.length <= 0 ? null : saveNote }>
                     Save
