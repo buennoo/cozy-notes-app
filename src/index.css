@@ -10,6 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(218, 207, 226);
 }
 
 code {
@@ -26,8 +27,17 @@ code {
 }
 
 .header-wrap {
+  display: flex;
+  flex-direction: column;
+
   margin: 0 auto;
-  background-color: aliceblue;
-  width: fit-content;
-  height: fit-content;
+  padding-top: 25px;
+  background-image: url('assets/paper_background.png');
+  background-repeat: no-repeat;
+  background-size: 100%; 
+  background-position: center;
+  background-origin: padding-box;
+
+  width: 450px;
+  height: 270px;
 }
