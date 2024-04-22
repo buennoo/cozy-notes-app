@@ -40,13 +40,13 @@ const App = () => {
     setNotes(newNotes);
   }
 
-  const updateNotePosition = (id, newPosX, newPosY) => {
-    setNotes((oldNotes) => 
-      oldNotes.map((note) =>
-      note.id === id ? {...note, position: {x: newPosX, y: newPosY}} : note
-      )
-    );
-  }
+  // const updateNotePosition = (id, newPosX, newPosY) => {
+  //   setNotes((oldNotes) => 
+  //     oldNotes.map((note) =>
+  //     note.id === id ? {...note, position: {x: newPosX, y: newPosY}} : note
+  //     )
+  //   );
+  // }
   
   const readDarkMode = localStorage.getItem('dark') === 'true';
   const [darkMode, setDarkMode] = useState(readDarkMode);
