@@ -9,17 +9,28 @@ const App = () => {
     {
       id: nanoid(),
       text: "First note~\n\nYou can drag me around :)",
-      date: "04/04/2024"
+      date: "04/04/2024",
+      position: {
+        x: 0,
+        y: 0
+      }
     },
   ]);
 
   const addNewNote = (input) => {
     const date = new Date();
+    const width = window.innerWidth;
+    const height = window.innerHeight;
     const newNote = {
       id: nanoid(),
       text: input,
-      date: date.toLocaleDateString()
+      date: date.toLocaleDateString(),
+      position: {
+        x: Math.floor(Math.random()*width),
+        y: Math.floor(Math.random()*100)
+      }
     }
+    console.log(Math.floor(Math.random() * 25));
     const newNotes = [...notes, newNote];
     setNotes(newNotes);
   }
@@ -27,6 +38,14 @@ const App = () => {
   const deleteNote = (id) => {
     const newNotes = notes.filter((note) => note.id !== id);
     setNotes(newNotes);
+  }
+
+  const updateNotePosition = (id, newPosX, newPosY) => {
+    setNotes((oldNotes) => 
+      oldNotes.map((note) =>
+      note.id === id ? {...note, position: {x: newPosX, y: newPosY}} : note
+      )
+    );
   }
   
   const readDarkMode = localStorage.getItem('dark') === 'true';

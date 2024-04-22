@@ -2,25 +2,25 @@ import { useState } from 'react';
 import { MdDeleteForever } from "react-icons/md";
 import '../styles/Note.css';
 
-const Note = ({ id, text, date, toDelete }) => {
+const Note = ({ id, text, date, toDelete, posX, posY}) => {
     const [isDragged, setIsDragged] = useState(false);
-    const [position, setPosition] = useState({x:0, y:0});
-    const [startPosition, setStartPosition] = useState({x:0, y:0});
+    const [position, setPosition] = useState({posX, posY});
+    const [startPosition, setStartPosition] = useState({posX, posY});
 
     const handleMouseDown = (event) => {
         setIsDragged(true);
         // calculate difference between cursor and left upper corner
         setStartPosition({
-            x: event.clientX - position.x,
-            y: event.clientY - position.y
+            posX: event.clientX - position.posX,
+            posY: event.clientY - position.posY
         });
     }
 
     const handleMouseMove = (event) => {
         if(isDragged) {
             setPosition({
-                x: event.clientX - startPosition.x,
-                y: event.clientY - startPosition.y
+                posX: event.clientX - startPosition.posX,
+                posY: event.clientY - startPosition.posY
             });
         }
     }
@@ -31,7 +31,7 @@ const Note = ({ id, text, date, toDelete }) => {
 
     return (
         <div className="note"
-        style={{position: 'absolute', cursor: isDragged ? 'grabbing' : 'grab', left: position.x, top: position.y }}
+        style={{position: 'absolute', cursor: isDragged ? 'grabbing' : 'grab', left: position.posX, top: position.posY }}
         id={id}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
