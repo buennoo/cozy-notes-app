@@ -27,7 +27,11 @@ const Note = ({ id, text, date, toDelete, posX, posY, updatePos }) => {
 
     const handleMouseUp = () => {
         setIsDragged(false);
-        updatePos(id, position.posX, position.posY);
+        updatePosition(id, position.posX, position.posY);
+    }
+
+    const updatePosition = (id, x, y) => {
+        updatePos(id, x, y);
     }
 
     return (

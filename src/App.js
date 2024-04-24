@@ -34,8 +34,15 @@ const App = () => {
   }
 
   const deleteNote = (id) => {
-    const newNotes = notes.filter((note) => note.id !== id);
-    setNotes(newNotes);
+    // notes.map((note, index) => {
+    //   console.log(index, note.id, note.position.x, note.position.y);
+    // })
+    const NotesAfter = notes.filter((note) => note.id !== id);
+    // console.log('after');
+    // // NotesAfter.map((note, index) => {
+    // //   console.log(index, note.id, note.position.x, note.position.y);
+    // // })
+    setNotes(NotesAfter);
   }
 
   const updateNotePosition = (id, newPosX, newPosY) => {
@@ -44,14 +51,8 @@ const App = () => {
         note.id === id ? { ...note, position: {x: newPosX, y: newPosY} } : note
       )
     );
-    // console.log('new', newPosX);
-    // notes.map((note) => {
-    //   if(note.id === id){
-    //     console.log(note.position.x);
-    //     note.position.x  = newPosX;
-    //     note.position.y  = newPosY;
-    //   }
-    // })
+    console.log('newX:', newPosX);
+    console.log('newY:', newPosY);
   }
   
   const readDarkMode = localStorage.getItem('dark') === 'true';
