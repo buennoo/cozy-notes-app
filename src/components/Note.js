@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { MdDeleteForever } from "react-icons/md";
 import '../styles/Note.css';
 
-const Note = ({ id, text, date, toDelete, posX, posY}) => {
+const Note = ({ id, text, date, toDelete, posX, posY, updatePos }) => {
     const [isDragged, setIsDragged] = useState(false);
     const [position, setPosition] = useState({posX, posY});
     const [startPosition, setStartPosition] = useState({posX, posY});
@@ -27,6 +27,7 @@ const Note = ({ id, text, date, toDelete, posX, posY}) => {
 
     const handleMouseUp = () => {
         setIsDragged(false);
+        updatePos(id, position.posX, position.posY);
     }
 
     return (

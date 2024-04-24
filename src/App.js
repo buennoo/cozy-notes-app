@@ -20,7 +20,6 @@ const App = () => {
   const addNewNote = (input) => {
     const date = new Date();
     const width = window.innerWidth;
-    const height = window.innerHeight;
     const newNote = {
       id: nanoid(),
       text: input,
@@ -30,7 +29,6 @@ const App = () => {
         y: Math.floor(Math.random()*100)
       }
     }
-    console.log(Math.floor(Math.random() * 25));
     const newNotes = [...notes, newNote];
     setNotes(newNotes);
   }
@@ -40,13 +38,21 @@ const App = () => {
     setNotes(newNotes);
   }
 
-  // const updateNotePosition = (id, newPosX, newPosY) => {
-  //   setNotes((oldNotes) => 
-  //     oldNotes.map((note) =>
-  //     note.id === id ? {...note, position: {x: newPosX, y: newPosY}} : note
-  //     )
-  //   );
-  // }
+  const updateNotePosition = (id, newPosX, newPosY) => {
+    setNotes((oldNotes) => 
+      oldNotes.map((note) =>
+        note.id === id ? { ...note, position: {x: newPosX, y: newPosY} } : note
+      )
+    );
+    // console.log('new', newPosX);
+    // notes.map((note) => {
+    //   if(note.id === id){
+    //     console.log(note.position.x);
+    //     note.position.x  = newPosX;
+    //     note.position.y  = newPosY;
+    //   }
+    // })
+  }
   
   const readDarkMode = localStorage.getItem('dark') === 'true';
   const [darkMode, setDarkMode] = useState(readDarkMode);
@@ -68,7 +74,7 @@ const App = () => {
         <Header turnDarkMode={setDarkMode} headerDarkMode={darkMode}/>
         <AddNote addNoteData={addNewNote}/>
       </div>
-      <NotesList notes={notes} handleDeleteNote={deleteNote}/>
+      <NotesList notes={notes} handleDeleteNote={deleteNote} updatePosition={updateNotePosition}/>
     </div>
   );
 }
