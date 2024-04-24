@@ -17,7 +17,6 @@ Quick note-taking application made with React.js. It provides the ability to cre
 Follow below steps:
 1. Clone this repository:
 `git clone https://github.com/buennoo/cozy-notes-app.git`
-or by simply clicking the 
 
 2. In terminal, navigate to the project directory:
 `cd cozy-notes-app`
