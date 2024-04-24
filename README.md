@@ -1,6 +1,8 @@
 # Cozy-notes-app 📝
 Quick note-taking application made with React.js. It provides the ability to create and delete short notes quickly.
 
+![usage-example](https://github.com/buennoo/cozy-notes-app/assets/127790828/6e59ccac-3584-4a15-81ed-99f00b74edf6)
+
 ## ✨ Features
 * Create Notes:
     - Each one is randomly placed on the page
