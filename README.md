@@ -30,6 +30,6 @@ or by simply clicking the
 
 The app should show be visible at http://localhost:3000
 
-### ✨ Contributions
+## Contributions
 This is a quick and simple React.js project, but contributions are still welcome. If you have any suggestions, improvements, or bug reports, please feel free to open an issue or create a pull request
 
