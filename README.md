@@ -16,16 +16,16 @@ Quick note-taking application made with React.js. It provides the ability to cre
 ## ✨ Getting Started
 Follow below steps:
 1. Clone this repository:
-`git clone https://github.com/buennoo/cozy-notes-app.git`
+ `git clone https://github.com/buennoo/cozy-notes-app.git`
 
-2. In terminal, navigate to the project directory:\
-`cd cozy-notes-app`
+2. In terminal, navigate to the project directory:
+ `cd cozy-notes-app`
 
-3. Install dependencies:\
-`npm install`
+3. Install dependencies:
+ `npm install`
 
-4. Start the aplication:\
-`npm start`
+4. Start the aplication:
+ `npm start`
 
 The app should show be visible at http://localhost:3000
 
