@@ -11,7 +11,7 @@ Quick note-taking application made with React.js. It provides the ability to cre
 * Responsive Design
 * Dark mode
 
-## ✨ Technologies used
+## ✨ Technologies
 * **React.js**: the main library used for frontend, including useState, useEffect hooks
 * **HTML, CSS**
 
@@ -37,4 +37,9 @@ The app should show be visible at http://localhost:3000
 
 ## Contributions
 This is a quick and simple React.js project, but contributions are still welcome. If you have any suggestions, improvements, or bug reports, please feel free to open an issue or create a pull request
+
+## Images License Information
+
+All images in this repository are from [Freepik](https://www.freepik.com/) and are used under the terms of Freepik's free license.
+Please visit [Freepik's Attribution](https://support.freepik.com/s/article/Attribution-How-when-and-where?language=en_US) for more information on the use and licensing of the images.
 
