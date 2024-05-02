@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/cozy-notes-app/static/css/main.016e63b7.css",
-    "main.js": "/cozy-notes-app/static/js/main.526e6484.js",
+    "main.js": "/cozy-notes-app/static/js/main.b5a54880.js",
     "static/media/note_background.png": "/cozy-notes-app/static/media/note_background.f6d070de3f35777db862.png",
     "static/media/paper_background.png": "/cozy-notes-app/static/media/paper_background.41239bd92126b4e36706.png",
     "static/media/tape.png": "/cozy-notes-app/static/media/tape.86f1aad44eb9e145e05d.png",
     "index.html": "/cozy-notes-app/index.html",
     "main.016e63b7.css.map": "/cozy-notes-app/static/css/main.016e63b7.css.map",
-    "main.526e6484.js.map": "/cozy-notes-app/static/js/main.526e6484.js.map"
+    "main.b5a54880.js.map": "/cozy-notes-app/static/js/main.b5a54880.js.map"
   },
   "entrypoints": [
     "static/css/main.016e63b7.css",
-    "static/js/main.526e6484.js"
+    "static/js/main.b5a54880.js"
   ]
 }
