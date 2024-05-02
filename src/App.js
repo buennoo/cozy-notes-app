@@ -20,10 +20,12 @@ const App = () => {
   const addNewNote = (input) => {
     const date = new Date();
     const width = window.innerWidth;
+    // regex expression to replace dots with slashes globally
+    const currentDate = date.toLocaleDateString().replace(/\./g, '/')
     const newNote = {
       id: nanoid(),
       text: input,
-      date: date.toLocaleDateString(),
+      date: currentDate,
       position: {
         x: Math.floor(Math.random()*width),
         y: Math.floor(Math.random()*100)
